@@ -12,7 +12,7 @@ const MaxHeapSize = 10
 
 // An Item is something we manage in a priority queue.
 type Item struct {
-	word  string // The word of the item; arbitrary.
+	word  string // The word of the item.
 	count int    // The count (priority) of the item in the queue.
 	// The index is needed by update and is maintained by the heap.Interface methods.
 	index int // The index of the item in the heap.
@@ -59,8 +59,6 @@ func (pq *PriorityQueue) update(item *Item, word string, count int) {
 	heap.Fix(pq, item.index)
 }
 
-// This example creates a PriorityQueue with some items, adds and manipulates an item,
-// and then removes the items in count order.
 func main() {
 	// Scan file from stdin
 	items := make(map[string]int)
