@@ -34,7 +34,7 @@ The bash pipeline performs these steps:
 
 ### Input Handling
 
-The script reads from `stdin` using the `bufio` package, which allows handling large text inputs efficiently.
+The script reads from `stdin` using the `bufio` package, which allows handling large text inputs efficiently. This has been done to mimic how the Bash pipeline takes input.
 
 ### Word Counting
 
