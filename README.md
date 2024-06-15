@@ -42,11 +42,11 @@ A map is used to store how many times each word appears. All words are converted
 
 ### Efficient Sorting with Min Heap
 
-Sorting all words and their counts would be slow for large inputs. Instead, we use a fixed-size min heap (size 10) to keep track of the top 10 most frequent words. This keeps memory usage constant, no matter how large the input.
+Sorting all words and their counts would be slow for large inputs. Instead, I use a fixed-size min heap (size 10) to keep track of the top 10 most frequent words. This keeps memory usage constant, no matter how large the input.
 
 ### Min Heap Implementation
 
-We use Go's `container/heap` package to manage the min heap. The algorithm processes the word frequency map, inserting each word into the heap if its count is greater than the smallest count in the heap. If the heap already has 10 elements, the smallest one is removed.
+I use Go's `container/heap` package to manage the min heap. The algorithm processes the word frequency map, inserting each word into the heap if its count is greater than the smallest count in the heap. If the heap already has 10 elements, the smallest one is removed.
 
 ### Output
 
